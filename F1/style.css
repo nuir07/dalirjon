@@ -1,0 +1,324 @@
+@font-face {
+    font-family: "MyFont";
+    src: url("./fonts/ppneuemontreal-book.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.2;
+    background: rgb(223, 223, 223);
+    position: relative;
+    font-family: 'MyFont';
+    margin-bottom: 100px;
+}
+
+.contaner {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.nihon-img-row {
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+}
+
+.nihon-img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.nihon-img-row span {
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.nihon-img-row img {
+    display: block;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 6px 6px 22px 6px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    margin: 0;
+}
+
+.nihon-img-row ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nihon-img-row a {
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+
+.nihon-img-row .images {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 10;
+}
+
+.button:hover .images {
+    display: block;
+}
+
+.link:before {
+    content: "";
+    position: absolute;
+    width: 1.5px;
+    height: 17px;
+    background-color: #000;
+    left: 0;
+    top: 0;
+}
+
+.link {
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.hover-wrapper {
+    /* position: relative; */
+    display: inline-block;
+}
+
+.hover-wrapper .images {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 20%;
+    width: 1000px;
+    height: 1000px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.hover-wrapper:hover .images {
+    display: block;
+}
+
+.show-btn {
+    padding: 5px 15px;
+}
+
+.show-btn a {
+    text-decoration: none;
+    color: black;
+}
+
+.nihon-hobbi-bg {
+    background: #e5ffe7;
+    padding: 30px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+.nihon-hobbi-bg ol {
+    padding: 0;
+    padding-left: 15px;
+    margin: 0;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: grey;
+    font-weight: 500;
+}
+
+.nihon-hobbi-bg h2 {
+    margin-top: 0;
+}
+
+.nihon-experience-bg {
+    background: #ffe5e5;
+    padding: 30px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+
+.nihon-experience-bg tr {
+    width: 100%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+td {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    color: grey;
+    margin-bottom: 5px;
+}
+
+th {
+    text-align: start;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.nihon-experience-bg table {
+    width: 100%;
+}
+
+tbody {
+    display: flex;
+    align-items: center;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+}
+
+.nihon-input-bg {
+    background: #fff9dc;
+    padding: 30px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+.nihon-course-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nihon-course-column-item {
+    padding: 2px;
+    border-bottom: 1px solid grey;
+}
+
+.nihon-course-column-item a {
+    color: grey;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.nihon-input-row,
+.item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nihon-input-row-item:first-child {
+    display: flex;
+    gap: 20px;
+}
+
+.nihon-input-row-item input,
+textarea {
+    width: 100%;
+}
+
+input {
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+    margin-bottom: 20px;
+
+}
+
+textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+    margin-bottom: 20px;
+
+}
+
+
+
+.item {
+    font-size: 17px;
+    color: grey;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.row input {
+    margin: 0;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 40px;
+    padding-top: 200px;
+    z-index: 99;
+    flex-direction: column;
+}
+
+.nihon-input-2--bg {
+    background: rgb(255, 255, 255);
+    position: relative;
+    z-index: 100;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 6px 6px 22px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+}
+
+.modal-2 {
+}
+
+.modal-2 button {
+    padding: 40px 120px;
+    font-size: 40px;
+}

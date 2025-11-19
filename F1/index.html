@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section class="nihon-img">
+        <div class="contaner">
+            <div class="nihon-img-row">
+                <img src="../lecler.webp" alt="000">
+                <div>
+                    <h1>Charles Leclerc</h1>
+                    <p>Професиональный гонщик <b>Formula 1 </b></p>
+                    <p>Я люблю Besit Dalirjana, и смотреть хент., кхм кхм аниме и так далее</p>
+                    <span>Мои социальные сети</span>
+                    <ul>
+                        <li><a
+                                href="https://www.instagram.com/kurozanh?igsh=MTJmcWw2d2k1NjU3MQ%3D%3D&utm_source=qr">Instagram</a>
+                        </li>
+                        <li><a class="link" href="https://onlyfans.com/hannahowo">Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="nihon-hobbi">
+        <div class="contaner">
+            <div class="nihon-hobbi-bg">
+                <h2> Мои хобби</h2>
+                <ol>
+                    <li>YouTube</li>
+                    <li>Езда на машине</li>
+                    <li>Мобильные игры</li>
+                    <li>Любоваться hannahowo</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section class="nihon-experience">
+        <div class="contaner">
+            <div class="nihon-experience-bg">
+                <h2>Опыт работы</h2>
+                <table>
+                    <tr>
+                        <th>Компания</th>
+                        <th>Должность</th>
+                        <th>Год</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Hannah Owo
+                        </td>
+                        <td>Продюсер</td>
+                        <td>2017-2018</td>
+                    </tr>
+                    <tr>
+                        <td>Misha</td>
+                        <td>Вледелец</td>
+                        <td>2009-2200</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section class="nihon-course">
+        <div class="contaner">
+            <div class="nihon-input-bg">
+                <h2>Мои гонки</h2>
+                <div class="nihon-course-column">
+                    <div class="nihon-course-column-item">
+                        <a href="https://www.youtube.com/watch?v=BwCGWSoAgj8&pp=ygUGbGVjbGVy">Charles Leclerc: 24 Hours
+                            In Monaco (Day In The Life)</a>
+                    </div>
+                    <div class="nihon-course-column-item">
+                        <a href="https://www.youtube.com/watch?v=RX4Bc_WqAPw">Charles Leclerc: 24 Hours Leman (Day In
+                            The Life)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="nihon-input">
+        <div class="contaner">
+            <h2>Связаться со мной</h2>
+            <div class="nihon-input-row">
+                <div class="nihon-input-row-item">
+                    <div class="item">Ваше имя: <input type="text" placeholder="Введите ваше имя..."></div>
+                    <div class="item">Ваш Email: <input type="text" placeholder="Введите email"></div>
+                </div>
+                <div class="nihon-input-row-item">
+                    <div class="item">Ваше сообщение: <textarea name="" id=""></textarea></div>
+                    <div class="hover-wrapper">
+                        <button class="show-btn"><a href="https://t.me/frblag">Связаться</a></button>
+                        <img src="../ALKASH.jpg" class="images" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- <button></button> -->
+        </div>
+    </section>
+    <section class="nihon-input-2">
+        <div class="contaner">
+            <div class="nihon-input-2--bg">
+                <h2>Кто лучший по итогу Гонщик?</h2>
+                <div class="row">
+                    <input type="radio" name="driver" value="leclerc"> Charles Leclerc
+                </div>
+                <div class="row">
+                    <input type="radio" name="driver" value="verstappen"> Max Verstappen
+                </div>
+                <div class="row">
+                    <input type="radio" name="driver" value="hamilton"> Lewis Hamilton
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal" style="display:none;">
+        <img src="https://www.meme-arsenal.com/memes/9c1023d05a5a7768a7d157f8973033cf.jpg" alt="" style="height: 400px;">
+        <h1>Неправильный выбор!</h1>
+    </div>
+    <div id="modal-2" class="modal modal-2" style="display:none;">
+        <img src="https://i.ytimg.com/vi/JRLRQqn-Go0/maxresdefault.jpg" alt="" style="height: 400px;">
+        <h1>Правильный выбор лее!</h1>
+        <button id="btn">Закрыть</button>
+    </div>
+
+    <audio id="fun-audio" src="music.m4a" loop></audio>
+    <audio id="fun-audio-2" src="music-2.m4a" loop></audio>
+
+    <script>
+        const radios = document.querySelectorAll('input[name="driver"]');
+        const modalWrong = document.getElementById('modal');       
+        const modalRight = document.getElementById('modal-2');     
+        const audioRight = document.getElementById('fun-audio');   
+        const audioWrong = document.getElementById('fun-audio-2'); 
+        const btn = document.getElementById('btn')
+
+        btn.addEventListener('click', () => {
+            modalRight.style.display = 'none';
+            audioRight.pause();
+        })
+
+        radios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                if (radio.value !== 'verstappen') {
+                    modalWrong.style.display = 'flex';
+                    modalRight.style.display = 'none';
+
+                    if (audioWrong.paused) {
+                        audioWrong.currentTime = 0;
+                        audioWrong.play();
+                    }
+
+                    audioRight.pause();
+                    audioRight.currentTime = 0;
+                } else {
+                    modalWrong.style.display = 'none';
+                    modalRight.style.display = 'flex';
+
+                    audioWrong.pause();
+                    audioWrong.currentTime = 0;
+
+                    if (audioRight.paused) {
+                        audioRight.currentTime = 0;
+                        audioRight.play();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
